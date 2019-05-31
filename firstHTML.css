@@ -1,9 +1,15 @@
 p{
     color: black;
+    /* form of CSS declaration: color is property
+    use ':' to seperate two entries , black is value */
 }
+/* padding: set padding area, inner distance, top, right, bottom, left*/
+/* border: set border size , form, color */
+/* margin: set margin area, outer distance, top, right, bottom, left*/
 
 strong{
     color: rgba(66, 206, 23, 0.63);
+    /* if you have more than one property need to use ';' to seperate them */
     text-decoration: underline;
     text-decoration-color: lime;
 }
@@ -46,3 +52,57 @@ div#secondpart>p{
 }
 /* it is a little different from firstpart, if you + '>',this mean it will only change p if p is 'child' of div#secondpart*/
 /* div#secondpart will change p ,if it is 'parent' of p */
+
+[system = "IOS"]{
+    /* this is called attribute selector */
+    background-color: black;
+    color: white;
+}
+/* ~=: not equal
+    =: equal
+   ^=: element start with val
+   $=: element end with val
+   *=: element contain val */
+/* it doesn't have >,<,<=,>= */
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* decide how the keyframe work ,can apply in animation */
+
+body>blockquote{
+    width: 3rem;
+    transform-origin: center;
+
+}
+/* this can make sure where is the center of your element */
+/* check how long is your element ,width set to half of it's long*/
+body>blockquote:hover{
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+}
+
+div#cascadepart>p#line2{
+    background-color: violet;
+    border: black;
+}
+div#cascadepart>p.cclass1{
+    background-color: aquamarine;
+    border: none !important;
+}
+/* !important have the higher specificity ,
+but recommend don't use it ,because it change the way cascade works,
+this will make you hard to debug*/
+div#cascadepart>p{
+    background-color: blue;
+    border: darkgreen;
+}
+/* in this case we can see ID/class selector have higher specificity than element
+    ,and id>>class */
