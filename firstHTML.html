@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- old html use ,to defend problem so will still put inside -->
+<html>
+    <!-- content inside full html -->
+<head>
+    <!-- things like setup imformation  -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width = device - width">
+    <link rel= "stylesheet" href = "firstHTML.css">
+    <!-- set which CSS need to be import -->
+    <title>MyFirstHtml</title>
+    <!-- this will appear in the top of paging -->
+</head>
+<body>
+    <!-- body: you put all the thing you want to show in website in it -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaHlUiDaoyutMKLhcHMCHVFilTru1so0Sv0hp8rae_4597_Ykhw">
+    <!-- embbed image to website -->
+    <div id="firstpart">
+        <!-- div: division element ,make content to different part ,it will change new line automatically -->
+        <p>I don't have administrator</p>
+        <!-- p: paragraph element ,it will change new line automatically -->
+        <p>pikachu</p>
+        <h1>this feels <strong>fucking BAD</strong></h1>
+        <!-- h1 ~ h6: change the size of font ,big to small ,need change line with <br>  -->
+        <!-- strong: make font to bold -->
+    </div>
+
+    <div id="secondpart">
+        <p>test for second part</p>
+        <ul>
+        <!-- ul: unorder list element ,increase indent automaticallly-->
+            <li>This is list 1</li>
+                <blockquote>content1</blockquote> 
+                <!-- blockquote: a block we put quotation inside ,you can put some example code or function inside it -->
+            <li>This is list 2</li>
+                <ul>content2</ul>
+        </ul>
+    </div>
+
+    <div id = "youtubepart">
+        <iframe width=" 420" height="300" src = "https://www.youtube.com/embed/Cb3PjfD90wQ?autoplay=1" allow="autoplay">
+        </iframe>
+        <!-- + "/embed/" after ".com" can embbed video in html ,url from share youtube  -->
+        <!-- add ?autoplay=1 can help use load the video when they load in page, but can't play because google doesn't allow us to do let -->
+        <!-- autoplay is only enable when you add '&mute=1' ,but it don't have sound -->
+        <!-- chrome has set the new autoplay policy so in some case you can't autoplay video with sound , I put website link below you can check it-->
+        <!-- you may try ' allow = "autoplay" ' add after src in some case it may work -->
+        <!-- https://developers.google.com/web/updates/2017/09/autoplay-policy-changes -->
+        <p>learn how to write html in vscode</p>
+
+    </div>
+</body>
+</html>

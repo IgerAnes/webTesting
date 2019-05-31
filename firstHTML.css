@@ -1,0 +1,48 @@
+p{
+    color: black;
+}
+
+strong{
+    color: rgba(66, 206, 23, 0.63);
+    text-decoration: underline;
+    text-decoration-color: lime;
+}
+/* highlight the color name you can use rgba to change your color ,amazing tool in VScode */
+
+body{
+    font: 1em/150% Helvetica, Arial, sans-serif;
+    padding: 1em;
+    margin: 0 auto;
+    max-width: 33em; 
+}
+/* unit in CSS: px, em, rem, % */
+/* px: pixel the unit of screen different size for different screen*/
+/* em: this resist the size of default font size
+        if default font size is 16px, then 0.75em mean 16x0.75 = 12, 12px 
+        Important: different floor of em will effect each other ,if you change the size in upper floor it will effect all floor below 
+        maybe_not_correct: make sure number of px is integar, not float, look like float can use in some case ,I'm not very sure about that*/
+/* rem: root em it only work for CSS3+ ,but it is a strong tool to use 
+        the better thing is "it doesn't affect different floor" ,only the root font size will affect them
+        this make web design more easy to change web style*/
+/* %: ex. 80% , current_font_size x 0.8 */
+
+@media (min-width: 70em){
+    body{
+        font-size: 130%
+    }
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+div#firstpart p{
+    background-color: aqua;
+}
+/* div#id_value it can let CSS know which style need to change */
+/* in above case, it will change all p below div#firstpart */
+div#secondpart>p{
+    background-color: blueviolet;
+}
+/* it is a little different from firstpart, if you + '>',this mean it will only change p if p is 'child' of div#secondpart*/
+/* div#secondpart will change p ,if it is 'parent' of p */
